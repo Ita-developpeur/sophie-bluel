@@ -1,6 +1,6 @@
 /* http://meyerweb.com/eric/tools/css/reset/
-   v2.0 | 20110126
-   License: none (public domain)
+v2.0 | 20110126
+License: none (public domain)
 */
 
 html, body, div, span, applet, object, iframe,
@@ -88,16 +88,32 @@ nav ul {
 	display: flex;
 	align-items: center;
 	list-style-type: none;
-
 }
+
 nav li {
 	padding: 0 10px;
 	font-size: 1.2em;
+	text-decoration: none;
+	color: black;
+	cursor: pointer;
 }
 
-li:hover {
+li:hover,
+li:focus {
 	color: #B1663C;
 }
+
+nav li a {
+	text-decoration: none;
+	color: black;
+	cursor: pointer;
+}
+
+nav li a:hover,
+nav li a:focus {
+	color: #B1663C;
+}
+
 #introduction {
 	display: flex;
 	align-items: center;
@@ -160,7 +176,9 @@ margin: auto;
 	font-size: 1.2em;
 	border: none;
 	box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+	cursor: pointer;
 }
+
 #contact label {
 	margin: 2em 0 1em 0;
 }
@@ -180,9 +198,54 @@ input[type="submit"]{
 	border-radius: 60px ;
 }
 
+input[type="submit"]:hover,
+input[type="submit"]:focus {
+	background-color: #0E2F28;
+	color: white;
+}
+
 footer nav ul {
 	display: flex;
 	justify-content: flex-end;
 	margin: 2em
 }
 
+ul button {
+	color: #1D6154;
+	height: 40px;
+	border-radius: 20px;
+	background-color: white;
+	border-color: #1D6154;
+	font-family: syne, sans-serif;
+	margin: 5px;
+	margin-top: 20px;
+	margin-bottom: 40px;
+	cursor: pointer;
+}
+
+ul button:hover,
+ul button:focus {
+	background-color: #1D6154;
+	color: white;
+}
+
+ul button:nth-child(1) {
+	width: 80px;
+}
+
+ul button:nth-child(2) {
+	width: 80px;
+}
+
+ul button:nth-child(3) {
+	width: 130px;
+}
+
+ul button:nth-child(4) {
+	width: 170px;
+}
+
+.filters {
+	display: flex;
+	justify-content: center;
+}

@@ -47,6 +47,7 @@ nav ul {
 nav li {
   padding: 0 10px;
   font-size: 1.2em;
+  cursor: pointer;
 }
 
 li:hover,
@@ -57,6 +58,11 @@ li:focus {
 a {
   text-decoration: none;
   color: black;
+}
+
+a:hover,
+a:focus {
+  color: #B1663C;
 }
 
 [id="contact"] {
@@ -109,6 +115,7 @@ a {
   width: 180px;
   text-align: center;
   border-radius: 60px;
+  cursor: pointer;
 }
 
 .error {
