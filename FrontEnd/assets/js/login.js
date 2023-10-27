@@ -29,7 +29,7 @@ async function login() {
     let data = await response.json();
     localStorage.setItem("token", data.token);
     window.location.href = "../index.html";
-
+    
   } else {
     emailElt.style.border = '1px solid red';
     passwordElt.style.border = '1px solid red';
