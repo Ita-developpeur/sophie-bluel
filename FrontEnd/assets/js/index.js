@@ -33,7 +33,7 @@ async function getCategories() {
   .then(data => {
 
     let gallery     = document.querySelector('.gallery');
-    if (sessionStorage.getItem("token") === null) {
+    if (localStorage.getItem("token") === null) {
       createFilters(data);
     }
   });
@@ -130,23 +130,22 @@ function createFilters(data) {
  */
 function logout() {
   let loginButton = document.getElementById("login");
-  if (sessionStorage.getItem("token")) {
+
+  console.log(localStorage.getItem("token"));
+
+  if (localStorage.getItem("token")) {
     loginButton.textContent = "logout";
   }
   else {
     loginButton.textContent = "login";
   }
   loginButton.addEventListener("click", function () {
-    /Vérifier si un token est présent dans le sessionStorage/
-    if (sessionStorage.getItem("token")) {
-      /Effacer le token du sessionStorage/
-      sessionStorage.removeItem("token");
+    /Vérifier si un token est présent dans le localStorage/
+    if (localStorage.getItem("token")) {
+      /Effacer le token du localStorage/
+      localStorage.removeItem("token");
       loginButton.textContent = "login";
-
-      if (!isPageRefreshed) {
-        isPageRefreshed = true;
-        location.reload();
-      }
+      window.location.href = "index.html";
     } else {
       window.location.href = "assets/login.html";
     }

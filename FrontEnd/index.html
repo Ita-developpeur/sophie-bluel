@@ -8,11 +8,20 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Work+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 	<meta name="description" content="">
 	<link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
+
+  <header id="admin-screen">
+    <p id="edit">
+      <i class="fa-regular fa-pen-to-square"></i>
+      Mode édition
+      <label>Publier les changements</label>
+    </p>
+  </header>
 
   <header>
     <h1>Sophie Bluel <span>Architecte d'inteérieur</span></h1>
@@ -50,11 +59,13 @@
     </section>
 
     <section id="portfolio">
+      <header>
       <h2>Mes Projets</h2>
-      <div class="editBtn">
+      <p id="modify">
         <i class="fa-regular fa-pen-to-square"></i>
-        <p class="modifier">modifier</p>
-      </div>
+        Modifier
+      </p>
+      </header>
       <ul class="filters"></ul>
       <div class="gallery"></div>
     </section>
