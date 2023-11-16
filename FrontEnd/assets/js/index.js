@@ -132,7 +132,6 @@ function logout() {
   let loginButton = document.getElementById("login");
   let editor = document.getElementById("edit");
   let modify = document.getElementById("modify");
-  let editPicture = document.getElementById("edit-picture");
 
   console.log(localStorage.getItem("token"));
 
@@ -140,13 +139,11 @@ function logout() {
     loginButton.textContent = "logout";
     editor.style.display = "flex";
     modify.style.display = "flex";
-    editPicture.style.display = "flex";
   }
   else {
     loginButton.textContent = "login";
     editor.style.display = "none";
     modify.style.display = "none";
-    editPicture.style.display = "none";
   }
   loginButton.addEventListener("click", function () {
     /Vérifier si un token est présent dans le localStorage/

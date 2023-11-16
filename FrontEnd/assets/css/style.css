@@ -48,14 +48,15 @@ table {
 }
 /** end reset css**/
 body {
-	max-width: 1140px;
+	/*max-width: 1140px;*/
 	font-family: 'Work Sans' ;
 	font-size: 14px;
 }
 body > header {
 	display: flex;
 	justify-content: space-between;
-	margin: 50px 0
+	margin: 50px auto;
+	max-width: 1140px;
 }
 section {
 	margin: 50px 0
@@ -273,22 +274,12 @@ ul button:nth-child(4) {
 	gap: 10px;
 	align-items: center;
 	display: none;
-}
-
-[id="edit"] label {
-	background-color: white;
-	color: black;
-	padding: 10px 20px;
-	border-radius: 20px;
-}
-
-body:not([id="edit"]) {
-	margin: auto;
-}
-
-[id="edit-picture"] {
+	height: 30px;
 	cursor: pointer;
-	display: none;
-	display: flex;
-	gap: 7px;
+}
+
+main,
+footer {
+	margin: auto;
+	max-width: 1140px;
 }
